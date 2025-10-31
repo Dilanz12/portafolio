@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Dilanz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hola Soy Dilanz</h1>
+            <p>Este es mi portafolio</p>
+        </header>
+
+        <nav class="navbar">
+            <button onclick="scrollToSection('sobre-mi')">Sobre mí</button>
+            <button onclick="scrollToSection('estudios')">Mis estudios</button>
+            <button onclick="scrollToSection('trabajos')">Ejemplos</button>
+            <button onclick="scrollToSection('creaciones')">Mis creaciones</button>
+        </nav>
+
+        <main>
+            <section id="sobre-mi" class="card">
+                <h2>Sobre mí</h2>
+                <p>Soy un configurador y developer de Minecraft.</p>
+                <a href="info/sobre-mi.html" class="btn">Más sobre mí</a>
+            </section>
+
+            <section id="estudios" class="list">
+                <h2>estudios donde trabajo</h2>
+                <ul>
+                    <li>
+                        <img src="imagenes/owleaf.png" alt="Owleaf">
+                        <p>Owleaf</p>
+                    </li>
+                    <li>
+                        <img src="imagenes/ag.png" alt="AG">
+                        <p>AG</p>
+                    </li>
+                    <li>
+                        <img src="imagenes/cherry.png" alt="Cherry Events">
+                        <p>Cherry Events</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="trabajos" class="list">
+                <h2>Ejemplos de mi trabajo</h2>
+				<p>Solo dejo mis favoritos y los mas queridos por la comunidad.</p>
+                <ul>
+                    <li>
+                        <a href="info/torre.html">
+                            <img src="imagenes/torre.png" alt="La torre">
+                            <p>La torre (Squid Craft Games 3)</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info/ahorcado.html">
+                            <img src="imagenes/ahorcado.png" alt="Ahorcado">
+                            <p>Ahorcado (Squid Craft Games 2)</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info/memoria.html">
+                            <img src="imagenes/memoria.png" alt="Memoria">
+                            <p>Memoria (Squid Craft Games 3)</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="creaciones" class="list">
+                <h2>Mis Creaciones</h2>
+				<p>Solo dejo mis favoritos y los mas queridos por la comunidad.</p>
+                <ul>
+                    <li>
+                        <a href="info/exp.html">
+                            <img src="imagenes/exp.png" alt="Explicaciones">
+                            <p>Explicaciones (Squid Craft Games 3)</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info/pizarra.html">
+                            <img src="imagenes/pizarra.png" alt="Pizarra funcional">
+                            <p>Pizarra funcional (Squid Craft Games 2)</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info/base.html">
+                            <img src="imagenes/base.png" alt="Shader">
+                            <p>Shader para cueva congelada</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 Dilanz — Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script>
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>

@@ -3,114 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Dilanz</title>
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Dilanz</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Hola Soy Dilanz</h1>
-            <p>Este es mi portafolio</p>
-        </header>
+    <header class="banner">
+        <img src="imagenes/banner.png">
+        <h1>Dilanz</h1>
+    </header>
 
-        <nav class="navbar">
-            <button onclick="scrollToSection('sobre-mi')">Sobre mí</button>
-            <button onclick="scrollToSection('estudios')">Mis estudios</button>
-            <button onclick="scrollToSection('trabajos')">Ejemplos</button>
-            <button onclick="scrollToSection('creaciones')">Mis creaciones</button>
-        </nav>
+    <nav class="navbar">
+        <button onclick="scrollToSection('sobre-mi')">Sobre mí</button>
+        <button onclick="scrollToSection('estudios')">Estudios</button>
+        <button onclick="scrollToSection('mods')">Mods</button>
+        <button onclick="scrollToSection('configuracion')">Configuración</button>
+    </nav>
 
-        <main>
-            <section id="sobre-mi" class="card">
-                <h2>Sobre mí</h2>
-                <p>Soy un configurador y developer de Minecraft.</p>
-                <a href="info/sobre-mi.html" class="btn">Más sobre mí</a>
-            </section>
+    <main class="container">
+        <section id="sobre-mi" class="section reveal">
+            <h2>Sobre mí</h2>
+            <p>AQUÍ VA TODO TU TEXTO SOBRE TI</p>
+        </section>
 
-            <section id="estudios" class="list">
-                <h2>estudios donde trabajo</h2>
-                <ul>
-                    <li>
-                        <img src="imagenes/owleaf.png" alt="Owleaf">
-                        <p>Owleaf</p>
-                    </li>
-                    <li>
-                        <img src="imagenes/ag.png" alt="AG">
-                        <p>AG</p>
-                    </li>
-					<li>
-                        <img src="imagenes/nebula.png" alt="AG">
-                        <p>Nebula Community</p>
-                    </li>
-                    <li>
-                        <img src="imagenes/cherry.png" alt="Cherry Events">
-                        <p>Cherry Events</p>
-                    </li>
-                </ul>
-            </section>
+        <section id="estudios" class="section list reveal">
+            <h2>Estudios</h2>
+            <ul>
+                <li onclick="openModal('Owleaf','imagenes/owleaf.png','Estudio de minecraft')"><img src="imagenes/owleaf.png"><p>Owleaf</p></li>
+       
+                <li onclick="openModal('Nebula','imagenes/nebula.png','Estudio de sunset games')"><img src="imagenes/nebula.png"><p>Nebula</p></li>
+                <li onclick="openModal('Cherry','imagenes/cherry.png','Mi estudio favorito')"><img src="imagenes/cherry.png"><p>Cherry</p></li>
+            </ul>
+        </section>
 
-            <section id="trabajos" class="list">
-                <h2>Ejemplos de mi trabajo</h2>
-				<p>Solo dejo mis favoritos y los mas queridos por la comunidad.</p>
-                <ul>
-                    <li>
-                        <a href="info/torre.html">
-                            <img src="imagenes/torre.png" alt="La torre">
-                            <p>La torre (Squid Craft Games 3)</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="info/ahorcado.html">
-                            <img src="imagenes/ahorcado.png" alt="Ahorcado">
-                            <p>Ahorcado (Squid Craft Games 2)</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="info/memoria.html">
-                            <img src="imagenes/memoria.png" alt="Memoria">
-                            <p>Memoria (Squid Craft Games 3)</p>
-                        </a>
-                    </li>
-                </ul>
-            </section>
+        <section id="mods" class="section list reveal">
+            <h2>Mods</h2>
+            <ul>
+                <li onclick="openVideoModal('WaterAnim','https://www.youtube-nocookie.com/embed/E_1Wgvc-cWg','Mod que agrega animaciones customizablles, emotes y layers este video de pato pato ganso se puede ver la mayoria de mecanicas del mod')">
+                    <div class="video-thumb">
+                        <img src="https://img.youtube.com/vi/E_1Wgvc-cWg/maxresdefault.jpg">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <p>WaterAnim</p>
+                </li>
+                <li onclick="openModal('Instrucciones','imagenes/instrucciones.png','Mod de instrucciones replica al de eufonia estudio')"><img src="imagenes/instrucciones.png"><p>Instrucciones</p></li>
+                <li onclick="openVideoModal('Torre','https://www.youtube-nocookie.com/embed/iXmiwPqRoCI','Mod Juego de la torre para sunset games este esta en fabric y forge')">
+                    <div class="video-thumb">
+                        <img src="https://img.youtube.com/vi/iXmiwPqRoCI/maxresdefault.jpg">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <p>Torre</p>
+                </li>
+                <li onclick="openVideoModal('Periquito','https://www.youtube-nocookie.com/embed/E849ZAW5voM','Mod El juego de periquito de squid craft games 4 viene con sistema de camara y todo')">
+                    <div class="video-thumb">
+                        <img src="https://img.youtube.com/vi/E849ZAW5voM/maxresdefault.jpg">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <p>Periquito</p>
+                </li>
+                <li onclick="openVideoModal('Galleta','https://www.youtube-nocookie.com/embed/YJSjmH2teVQ','Mod  de la galleta de squid game 4')">
+                    <div class="video-thumb">
+                        <img src="https://img.youtube.com/vi/YJSjmH2teVQ/maxresdefault.jpg">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <p>Galleta</p>
+                </li>
+                <li onclick="openModal('Pizarra','imagenes/pizarra.png','Pizarra funcional se aprecia en el juego de ahorcado')"><img src="imagenes/pizarra.png"><p>Pizarra funcional se aprecia en el juego de ahorcado</p></li>
+                <li onclick="openVideoModal('Subtítulos','https://www.youtube-nocookie.com/embed/nkj2JiBnZoU','Mod que agrega subtítulos personalizados al juego')">
+                    <div class="video-thumb">
+                        <img src="https://img.youtube.com/vi/nkj2JiBnZoU/maxresdefault.jpg">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <p>Subtítulos</p>
+                </li>
+            </ul>
+        </section>
 
-            <section id="creaciones" class="list">
-                <h2>Mis Creaciones</h2>
-				<p>Solo dejo mis favoritos y los mas queridos por la comunidad.</p>
-                <ul>
-                    <li>
-                        <a href="info/exp.html">
-                            <img src="imagenes/exp.png" alt="Explicaciones">
-                            <p>Explicaciones (Squid Craft Games 3)</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="info/pizarra.html">
-                            <img src="imagenes/pizarra.png" alt="Pizarra funcional">
-                            <p>Pizarra funcional (Squid Craft Games 2)</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="info/base.html">
-                            <img src="imagenes/base.png" alt="Shader">
-                            <p>Shader para cueva congelada</p>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-        </main>
+        <section id="configuracion" class="section list reveal">
+            <h2>Configuración</h2>
+            <ul>
+                <li onclick="openVideoModal('Ahorcado','https://www.youtube-nocookie.com/embed/WbuoSSp1ro8','Juego de ahorcado de squid craft games 2')">
+                    <div class="video-thumb">
+                        <img src="https://img.youtube.com/vi/WbuoSSp1ro8/maxresdefault.jpg">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <p>Ahorcado</p>
+                </li>
+                <li onclick="openVideoModal('Memoria','https://www.youtube-nocookie.com/embed/TnU-d5DZTGU','Juego de memoria de squid craft games 3')">
+                    <div class="video-thumb">
+                        <img src="https://img.youtube.com/vi/TnU-d5DZTGU/maxresdefault.jpg">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <p>Memoria</p>
+                </li>
+                <li onclick="openVideoModal('Enbase','https://www.youtube-nocookie.com/embed/3uNQT5FFu3Y','juego de enbase con shader personalizado de squid craft games 2')">
+                    <div class="video-thumb">
+                        <img src="https://img.youtube.com/vi/3uNQT5FFu3Y/maxresdefault.jpg">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <p>Enbase</p>
+                </li>
+                <li onclick="openVideoModal('Dulce Sueños','https://www.youtube-nocookie.com/embed/s4JdsOibW0k','juego de dulce sueños de squid craft games 4')">
+                    <div class="video-thumb">
+                        <img src="https://img.youtube.com/vi/s4JdsOibW0k/maxresdefault.jpg">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <p>Dulce Sueños</p>
+                </li>
+                <li onclick="openVideoModal('Pato Pato Ganso','https://www.youtube-nocookie.com/embed/E_1Wgvc-cWg','el juego de pato pato ganso de squid craft games 4')">
+                    <div class="video-thumb">
+                        <img src="https://img.youtube.com/vi/E_1Wgvc-cWg/maxresdefault.jpg">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <p>Pato Pato Ganso</p>
+                </li>
+                <li onclick="openVideoModal('Final Squid 3','https://www.youtube-nocookie.com/embed/Npjt_qYKog4','Tercera entrega del minijuego Final de Squid craft games')">
+                    <div class="video-thumb">
+                        <img src="https://img.youtube.com/vi/Npjt_qYKog4/maxresdefault.jpg">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <p>Final Squid 3</p>
+                </li>
+            </ul>
+        </section>
+    </main>
 
-        <footer>
-            <p>© 2025 Dilanz — Todos los derechos reservados</p>
-        </footer>
+    <footer>
+        <p>© 2025 Dilanz</p>
+    </footer>
+
+    <div id="modal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">✕</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image">
+            <iframe id="modal-video" width="100%" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <p id="modal-text"></p>
+        </div>
     </div>
 
     <script>
-        function scrollToSection(id) {
-            const section = document.getElementById(id);
-            section.scrollIntoView({ behavior: "smooth" });
+        function scrollToSection(id){
+            document.getElementById(id).scrollIntoView({behavior:"smooth"})
         }
+        
+        function openModal(t,i,tx){
+            const m=document.getElementById("modal")
+            const img=document.getElementById("modal-image")
+            const video=document.getElementById("modal-video")
+            
+            document.getElementById("modal-title").innerText=t
+            img.src=i
+            img.style.display="block"
+            video.style.display="none"
+            document.getElementById("modal-text").innerText=tx
+            
+            m.classList.remove("hide")
+            m.style.display="flex"
+            setTimeout(()=>m.classList.add("show"),10)
+        }
+        
+        function openVideoModal(t,videoUrl,desc){
+            const m=document.getElementById("modal")
+            const img=document.getElementById("modal-image")
+            const video=document.getElementById("modal-video")
+            
+            document.getElementById("modal-title").innerText=t
+            video.src=videoUrl
+            video.style.display="block"
+            img.style.display="none"
+            document.getElementById("modal-text").innerText=desc||""
+            
+            m.classList.remove("hide")
+            m.style.display="flex"
+            setTimeout(()=>m.classList.add("show"),10)
+        }
+        
+        function closeModal(e){
+            const m=document.getElementById("modal")
+            const video=document.getElementById("modal-video")
+            
+            if(!e||e.target.id==="modal"){
+                m.classList.remove("show")
+                m.classList.add("hide")
+                setTimeout(()=>{
+                    m.style.display="none"
+                    video.src=""
+                },300)
+            }
+        }
+        
+        const observer=new IntersectionObserver(entries=>{
+            entries.forEach(e=>{
+                if(e.isIntersecting)e.target.classList.add("active")
+            })
+        },{threshold:.2})
+        
+        document.querySelectorAll(".reveal").forEach(el=>observer.observe(el))
     </script>
 </body>
 </html>
-
